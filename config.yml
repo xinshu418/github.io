@@ -1,0 +1,29 @@
+
+# 网站设置
+title: "您的姓名 - 计算机视觉研究员"
+email: "your.email@example.com"
+description: "专注于计算机视觉和机器学习的学术研究"
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# 构建设置
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 作者信息
+author:
+  name: "您的姓名"
+  affiliation: "所在大学/机构"
+  research_interests:
+    - "计算机视觉"
+    - "机器学习"
+    - "深度学习"
+
+# 社交媒体
+github_username: yourusername
+twitter_username: yourtwitter
+linkedin_username: yourlinkedin
+google_scholar: yourscholarid
