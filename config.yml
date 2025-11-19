@@ -1,29 +1,134 @@
 
-# 网站设置
-title: "舒欣"
-email: "xinshu@njau.edu.cn"
-description: "专注于计算机视觉和机器学习的学术研究"
-baseurl: ""
-url: "https://yourusername.github.io"
+# 网站设置（可根据需要增删字段）
+site:
+  title: "舒欣"
+  description: "专注于计算机视觉和机器学习的学术研究"
+  url: "https://yourusername.github.io" # 站点完整 url
+  baseurl: "" # 如果在子目录下托管，填写子目录
 
-# 构建设置
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# 导航：按顺序显示。要删除导航项，移除对应对象；要新增，追加一个对象。
+nav:
+  - label: "关于我"
+    href: "#about"
+  - label: "研究方向"
+    href: "#research"
+  - label: "发表论文"
+    href: "#publications"
+  - label: "项目"
+    href: "#projects"
+  - label: "联系"
+    href: "#contact"
 
-# 作者信息
-author:
+# 英雄区域（主页顶部）
+hero:
   name: "舒欣"
-  affiliation: "南京农业大学"
-  research_interests:
-    - "计算机视觉"
-    - "机器学习"
-    - "深度学习"
+  title: "计算机视觉与机器学习"
+  subtitle: "计算机视觉与机器学习研究"
+  avatar: "https://picsum.photos/200/200?grayscale" # 本地图片也可，如 /assets/avatar.jpg
+  buttons:
+    - label: "联系我"
+      url: "mailto:xinshu@njau.edu.cn"
+      style: "primary" # 可用值: primary / outline
+    - label: "GitHub"
+      url: "https://github.com/yourusername"
+      style: "outline"
 
-# 社交媒体
-github_username: yourusername
-twitter_username: yourtwitter
-linkedin_username: yourlinkedin
-google_scholar: yourscholarid
+# 关于我：可填写纯文本或支持简单 Markdown
+about:
+  description: |
+    我是南京农业大学教师，研究兴趣主要包括深度学习、生成模型和跨模态推理。
+  tech_stack:
+    - "Python"
+    - "PyTorch"
+    - "Matlab"
+    - "Scikit-learn"
+  education: # 按时间或优先级排序
+    - degree: "访问学者"
+      institution: "University of Oulu"
+      period: "2019-2020"
+    - degree: "工学博士学位 - 计算机软件与理论"
+      institution: "上海交通大学"
+      period: "2009-2013"
+    - degree: "理学硕士学位 - 应用数学"
+      institution: "南京农业大学"
+      period: "2006-2009"
+    - degree: "工学学士学位 - 农业机械化及其自动化"
+      institution: "佳木斯大学"
+      period: "2002-2006"
+
+# 研究方向：页面以卡片形式渲染，每项为一个对象
+research:
+  - title: "跨模态哈希"
+    icon: "fa-brain"
+    description: "研究基于深度学习的跨模态哈希"
+  - title: "AI4Science"
+    icon: "fa-eye"
+    description: "主要关注AI驱动的食品计算:食品风味建模"
+  - title: "生成模型"
+    icon: "fa-cube"
+    description: "GAN、扩散模型等生成式AI技术在图像合成和编辑中的应用"
+
+# 发表论文：按条目列出。要删除论文，移除对应对象；要添加论文，追加对象。
+publications:
+  - title: "Gaussian similarity preserving for cross-modal hashing"
+    authors: "Liuyin Lin, Xin Shu"
+    venue: "Neurocomputing"
+    year: 2022
+    pdf: "#" # 填写 PDF 链接或为空
+    code: "#" # 填写代码仓库链接或为空
+  - title: "Scalable multi-label canonical correlation analysis for cross-modal retrieval"
+    authors: "Xin Shu,Guoying Zhao"
+    venue: "Pattern Recognition"
+    year: 2021
+    pdf: "#" # 填写 PDF 链接或为空
+    code: "#" # 填写代码仓库链接或为空
+
+
+
+# 项目或资助信息
+projects:
+  - title: "小样本跨媒体检索研究"
+    description: "江苏省信息技术重点实验室开放课题"
+    period: "2022-2024"
+  - title: "多视角局部距离学习及其应用"
+    description: "国家自然科学基金青年基金"
+    period: "2016-2019"
+  - title: "多模态局部距离学习及其应用"
+    description: "江苏省自然科学基金青年基金"
+    period: "2016-2019"
+  - title: "多模态深度子空间学习及在植物病害诊断中的应用"
+    description: "中央高校科研业务费"
+    period: "2015-2016"
+
+# 联系方式与社交链接
+contact:
+  email: "xinshu@njau.edu.cn"
+  address: "南京农业大学"
+  social:
+    github: "https://github.com/yourusername"
+    linkedin: "https://www.linkedin.com/in/yourlinkedin"
+    twitter: "https://twitter.com/yourtwitter"
+    google_scholar: "https://scholar.google.com/yourid"
+
+# 页脚
+footer:
+  copyright: "© 2025 舒欣. 保留所有权利."
+
+# 外观配置（可选）
+appearance:
+  gradient_start: "#667eea"
+  gradient_end: "#764ba2"
+  accent: "#3b82f6"
+
+# 开关：是否显示某些版块（true/false）
+show:
+  hero: true
+  about: true
+  research: true
+  publications: true
+  projects: true
+  contact: true
+
+# 使用说明：
+# - 要增加/删除页面内容，编辑对应节点（例如在 publications 下添加/删除对象）。
+# - 如果打算让页面动态加载配置，请在页面中通过 JavaScript fetch 访问此文件（例如 fetch('/config.yml') 并解析为对象）。
