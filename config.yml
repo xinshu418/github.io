@@ -15,8 +15,8 @@ plugins:
 
 # 作者信息
 author:
-  name: "您的姓名"
-  affiliation: "所在大学/机构"
+  name: "舒欣"
+  affiliation: "南京农业大学"
   research_interests:
     - "计算机视觉"
     - "机器学习"
